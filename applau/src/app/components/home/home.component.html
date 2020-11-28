@@ -1,0 +1,77 @@
+<div class="mt-4 col-8 offset-2">
+    <div class="card">
+        <div class="card-header">Consultar movimiento</div>
+        <div class="card-body">
+
+            
+                <form #MovimientoForm=ngForm (ngSubmit)="onsubmit()"> 
+
+                    <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">ClientId</label>
+                    <div class="col-sm-10">
+                        <input type="ClientId" name="ClientId" class="form-control" id="ClientId" placeholder="IdCliente" [(ngModel)]="form.ClientId" required>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Fechadesde</label>
+                    <div class="col-sm-10">
+                        <input input type="datefrom" name="datefrom" class="form-control" id="inputPassword3" placeholder="datefrom" [(ngModel)]="form.datefrom" required>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">FechaHasta</label>
+                        <div class="col-sm-10">
+                            <input input type="dateTo" name="dateTo" class="form-control" id="dateTo" placeholder="dateTo" [(ngModel)]="form.dateTo" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" >Consultar</button>
+                    </div>
+                    </div>
+                </form>
+
+        </div>
+    </div>    
+ </div>    
+
+
+ <div class="alert alert-success mt-2 mb-2 " role="alert">
+Tabla de Movimientos en cuenta
+</div>   
+
+  <table   class="mt-4 table table-striped table-bordered row-border hover">
+    <thead>
+      <tr>
+        <th>Fecha Factura</th>
+        <th>Fecha Factura format</th>
+        <th>Numero</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of array">
+        <td>{{ a.ReceiptDate }}</td>
+        <td>{{ a.ReceiptDateFormat }}</td>
+        <td>{{ a.ReceiptNumber }}</td>
+        <td>{{ a.ReceiptType }}</td>
+
+
+      </tr>
+    </tbody>
+    </table> 
+
+ 
+
+    <div class="alert alert-success mt-2" role="alert">
+      Clientes con Posnet
+    </div>
+
+<app-clientes></app-clientes>
+
+<div class="alert alert-success mt-2" role="alert">
+  Clientes sin Posnet
+</div>      
+<app-clientesinposnet></app-clientesinposnet>
+ 
