@@ -1,0 +1,95 @@
+ <div class=" container ">
+  <div class=" row ">
+
+        <div class="mt-4 col-4 ">
+            <div class="card">
+                <div class="card-header alert-success">Consultar movimiento</div>
+                <div class="card-body">
+
+                    
+                        <form   #MovimientoForm=ngForm  id="formu"> 
+
+                            <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Id</label>
+                            <div class="col-sm-9">
+                                <input type="ClientId" name="ClientId" class="form-control" id="ClientId" placeholder="IdCliente" [(ngModel)]="form.ClientId" required>
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                            <label for="inputPassword3" class="col-3 col-form-label">From</label>
+                            <div class="col-sm-9">
+                                <input input type="datefrom" name="datefrom" class="form-control" id="inputPassword3" placeholder="datefrom" [(ngModel)]="form.datefrom" required>
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-3 col-form-label">To</label>
+                                <div class="col-sm-9">
+                                    <input input type="dateTo" name="dateTo" class="form-control" id="dateTo" placeholder="dateTo" [(ngModel)]="form.dateTo" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button (click)="onsubmit(); MovimientoForm.reset();resettablecanvas()"   class="btn btn-primary" >Consultar</button>
+                            </div>
+                            </div>
+                        </form>
+
+                </div>
+            </div>    
+        </div>    
+
+
+        <div class="mt-4 col-8 ">
+            <div class="card " >
+              <div class="card-header alert-success">
+                movimiento
+              </div>
+              <div class="card-body">
+                <table   id="tabletocanvas" class="mt-1   table table-striped table-bordered row-border hover">
+                  <thead>
+              
+                    
+                      <th>Fecha Factura</th>
+                      <th>Numero</th>
+                      <th>Tipo</th>
+                      <th>Subtotal</th>
+                 
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let a of array" >
+                  
+                      <td>{{ a.ReceiptDateFormat }}</td>
+                      <td>{{ a.ReceiptNumber }}</td>
+                      <td>{{ a.ReceiptType }}</td>
+                      <td>{{ a.Subtotal }}</td>
+              
+              
+                    </tr>
+                
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer text-muted">
+                <button (click)="download()" class="btn btn-primary" >Descargar PDF</button> 
+              </div>
+            </div>
+          </div>
+
+    </div>
+ </div>
+ 
+
+<div class="alert alert-success mt-2" role="alert">
+  Clientes con Posnet
+</div>
+
+<app-clientes></app-clientes>
+
+<div class="alert alert-success mt-2" role="alert">
+  Clientes sin Posnet
+</div>      
+<app-clientesinposnet></app-clientesinposnet>
+ 
+<div class="alert alert-success mt-2" role="alert">
+</div> 

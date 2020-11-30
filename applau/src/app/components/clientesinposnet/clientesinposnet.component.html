@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <table  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"  class="mt-4 mb-4 table table-striped table-bordered row-border hover">
+        <thead>
+          <tr>
+            <th>ClientId</th>
+            <th>Nombre</th>
+            <th>Codigo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ac of arraycliente ">
+             <td>{{ ac.ClientId }}</td>
+            <td>{{ ac.Name }}</td>
+            <td>{{ ac.Code}}</td>     
+          </tr>
+        </tbody>
+        </table>
+    </div>
