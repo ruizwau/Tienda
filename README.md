@@ -3,20 +3,20 @@
 Ejercicio Diloog Distribuidora Trocadero
 
 
-Back end
+#Backend
 
 Laravel 8 
 
 Creación de controladores,consumo de apis con HttpClient y definicion de routes. 
 
-Get/ Apis
+Get requests/ Apis
 
 http://132.148.19.159:80/api/client/Get?posnet=0
 http://132.148.19.159:80/api/client/Get?posnet=1
 http://132.148.19.159:80/api/client/Get?posnet=2
 http://132.148.19.159:80/api/account/Get/3?datefrom=26-03-2019&dateTo=26-06-2019
 
-Post/ Apis
+Post request/ Apis
 http://132.148.19.159/OAuth/Token
 
 
@@ -24,7 +24,7 @@ Run php artisan serve
 Navigate to http://localhost:8000/.
 Endpoints.
 
-Frontend
+#Frontend
 
 Angular 9
 
