@@ -11,14 +11,19 @@ El objetivo principal es desarrollar una solución frontend y backend para segui
   * Creación de controladores, consumo de apis con HttpClient y creación de rutas.
   
      Run php artisan serve
+					
      Navigar a http://localhost:8000/.
+					
      Endpoints.
 
 ## Tecnología Frontend
  #### Angular 9
  * creación de formularios y tablas que interactúan con el middleware.
-   Run ng serve .
+
+   Run ng serve 
+			
    Navigar a http://localhost:4200/. 
-   Endpoints
+			
+   Endpoints.
 
 
