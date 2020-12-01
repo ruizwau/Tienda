@@ -1,52 +1,27 @@
-# DiloogLaura
+#DiloogApp
+##Descripción:
+Aplicación para una distribuidora que permite la visualización de los movimientos en una cuenta de un cliente, movimientos que puede ser pagos realizados en efectivo o a través de Posnet cuando solicita mercadería o salda un monto adeudado.
+##Objetivo: 
+El objetivo principal es desarrollar una solución frontend y backend para seguimiento de movimientos en cuenta de cliente.
 
-Ejercicio Diloog Distribuidora Trocadero
-
-
-#Backend
-
+##Tecnologías
+Backend
 Laravel 8 
+Creación de controladores, consumo de apis con HttpClient y creación de rutas
+->Run php artisan serve
+->Navigar a http://localhost:8000/.
+->Endpoints.
 
-Creación de controladores,consumo de apis con HttpClient y definicion de routes. 
-
-Get requests/ Apis
-
-http://132.148.19.159:80/api/client/Get?posnet=0
-http://132.148.19.159:80/api/client/Get?posnet=1
-http://132.148.19.159:80/api/client/Get?posnet=2
-http://132.148.19.159:80/api/account/Get/3?datefrom=26-03-2019&dateTo=26-06-2019
-
-Post request/ Apis
-http://132.148.19.159/OAuth/Token
-
-
-Run php artisan serve
-Navigate to http://localhost:8000/.
-Endpoints.
-
-#Frontend
-
+Frontend
 Angular 9
-
-creacion de formularios y tablas que interactuan con el middleware.
-
-Run ng serve for a dev server. 
-Navigate to http://localhost:4200/. 
-The app will automatically reload if you change any of the source files.
-
-->localhost:4200/login
-
-->username:diloog
-->password:123456789
-
-
-Submit form y redirect a Home
-
-Home
-
-form de movimiento de cuentas y tabla con opcion de impresión.
-tabla de clientes con posnet.
-tabla de clientes sin posnet.
-
-
+creación de formularios y tablas que interactúan con el middleware.
+->Run ng serve .
+->Navigar a http://localhost:4200/. 
+->Endpoints:
+localhost:4200/login
+username:diloog
+password:123456789
+Envío del formulario y redirección a Home
+localhost:4200/Home
+Selección de cliente con o sin posnet y tabla de movimientos.
 
