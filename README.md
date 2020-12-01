@@ -1,10 +1,13 @@
-#DiloogApp
-##Descripción:
+# DiloogApp
+
+## Descripción:
 Aplicación para una distribuidora que permite la visualización de los movimientos en una cuenta de un cliente, movimientos que puede ser pagos realizados en efectivo o a través de Posnet cuando solicita mercadería o salda un monto adeudado.
-##Objetivo: 
+
+## Objetivo: 
 El objetivo principal es desarrollar una solución frontend y backend para seguimiento de movimientos en cuenta de cliente.
 
-##Tecnologías
+## Tecnologías
+
 Backend
 Laravel 8 
 Creación de controladores, consumo de apis con HttpClient y creación de rutas
